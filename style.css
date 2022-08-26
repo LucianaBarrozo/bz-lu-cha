@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+}
+html,
+body {
+    --black: hsl(240, 6%, 13%);
+    --gray: rgb(0, 0, 0);
+
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    
+}
+
+body {
+    display: grid;
+    place-items: center;
+
+}
+
+main {
+     background: url(images/cha.jpg) no-repeat center/cover;
+     width: 100vw;
+     min-height: 812px;
+     height: 100vh;
+}
+
+.container {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: var(--gray);
+
+}
+
+.avatar {
+    width: 10rem;
+    margin: 11.5rem auto 0;
+
+    position: relative;
+}
+
+.avatar span {
+    position: absolute;
+    top: -15px;
+    z-index: 1;
+    left: -25px;
+    animation-name: animacao;
+    animation-duration: 1s;
+    animation:animacao infinite 25s linear;
+}
+
+.avatar > img {
+    width: 10rem;
+    height: 11.5rem;
+    object-fit: cover;
+
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+    font-size: 1.5rem;
+
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--gray);
+    text-decoration: none;
+
+    margin-top: 0.25rem;
+
+    display: flex;
+    gap: 0,75rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin-top: 2rem;
+}
+
+ul {
+    margin-top: 4rem;
+
+    list-style: none;
+    padding: 0;
+
+    display: flex;
+    gap: 0.5rem;
+
+    justify-content: center;
+
+    border-radius: 30px;
+    
+
+}
+
+h1:hover{
+    color:rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(105, 0, 0),0 0 20px rgb(105, 0, 0), 0 0 30px rgb(105, 0, 0), 0 0 40px rgb(202, 2, 2), 0 0 50px rgb(255, 0, 0);
+}
+
+p:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgb(105, 0, 0),0 0 20px rgb(105, 0, 0), 0 0 30px rgb(105, 0, 0), 0 0 40px rgb(202, 2, 2), 0 0 50px rgb(255, 0, 0);
+}
+
+#youtube:hover{
+    border-radius: 50%;
+    transition-timing-function: cubic-bezier(-0,43,56,7);
+    transition-duration: 0.5s;
+   
+
+}
+
+#instagram:hover{
+    border-radius: 50%;
+    transition-timing-function: cubic-bezier(-0,43,56,7);
+    transition-duration: 0.5s;
+ 
+    
+}
+
+#twitter:hover{
+    border-radius: 50%;
+    transition-timing-function: cubic-bezier(-0,43,56,7);
+    transition-duration: 0.5s;
+    
+}
+
+@keyframes animacao {
+    from{
+        transform: translate(2rem) rotate(0deg);
+    }
+    to{
+        transform: translate(2rem) rotate(360deg);
+    }
+}
